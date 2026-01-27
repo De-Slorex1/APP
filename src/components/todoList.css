@@ -1,0 +1,15 @@
+.todo-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 2px solid blue;
+    margin: 12px 0px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+.todo-container input {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}

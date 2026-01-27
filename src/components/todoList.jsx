@@ -1,16 +1,18 @@
-import React from 'react'
+import './todoList.css'
 
-function TodoList({ userTodos }) {
+function TodoList({ userTodos, handleDelete, handleCompleted}) {
   return (
     <div>
-      {userTodos.map(todo => (
-        <div key={todo.id}>
-            <h2>{todo.title}</h2>
-            <p>category: {todo.category}</p>
-            <p>Priority: {todo.priority}</p>
-            <p>Date: {todo.deadLine}</p>
-        </div>
-      ))}
+      {userTodos.map((todo => (
+         <div className="todo-container" key={todo.id}>
+                {/* <input type="checkbox" value={todo.completed} onChange={() => handleCompleted(todo.id)} /> */}
+                <div>
+                  <h4>{todo.title}</h4>
+                  <p>{todo.category} . {todo.priority} . {todo.deadLine ? todo.deadLine : "No deadline"}</p>
+                  <button onClick={() => handleDelete(todo.id)} style={{backgroundColor: 'blue', border: 'none', padding: '8px 11px'}}>Delete</button>
+                </div>
+            </div>
+      )))}
     </div>
   )
 }

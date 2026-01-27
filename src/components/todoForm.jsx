@@ -13,13 +13,18 @@ function TodoForm({ handleTodo }) {
     function handleSubmit(e) {
         e.preventDefault()
         //Invoke the function here
-        handleTodo({
+        const todoObject = {
             id: Date.now(),
             title,
             category,
-            priority, 
-            deadLine
-        })
+            priority,
+            deadLine,
+            completed: false
+        }
+        handleTodo(todoObject)
+
+        setTitle("")
+        setDeadLine("")
     }
 
     return (
