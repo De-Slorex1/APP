@@ -11,5 +11,14 @@
 .todo-container input {
     width: 30px;
     height: 30px;
-    background-color: blue;
+}
+
+.todo-container.done h4 {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.todo-container.done p {
+    text-decoration: line-through;
+    color: grey;
 }

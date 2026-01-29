@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function TodoForm({ handleTodo }) {
+function TodoForm({ handleStoringOfData }) {
     const [title, setTitle] = useState("")
     const [category, setCategory] = useState("Personal")
     const [priority, setPriority] = useState("Low")
@@ -19,9 +19,9 @@ function TodoForm({ handleTodo }) {
             category,
             priority,
             deadLine,
-            completed: false
+            status: false 
         }
-        handleTodo(todoObject)
+        handleStoringOfData(todoObject)
 
         setTitle("")
         setDeadLine("")
